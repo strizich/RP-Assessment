@@ -1,0 +1,12 @@
+<section class="demo__module">
+    <h2>Fun Stuff</h2>
+    <div class="animated">
+      <div [class]="cssAnim ? 'box active' : 'box'">CSS</div>
+      <div class="box__angular" [@angularAnim]="ngAnim ? 'active' : 'inactive'">NG</div>
+    </div>
+
+    <div class="button__group button__group--flexbetween">
+        <button class="btn btn__primary" (click)="toggle()">Angular Animation</button> 
+        <button class="btn btn__primary" (click)="animTrigger()">CSS Animation</button>
+    </div>
+</section>

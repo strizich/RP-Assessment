@@ -1,0 +1,109 @@
+.header{
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  background: #000;
+}
+
+.logo{
+  display:inline-flex;
+  height:42px;
+  width: 94px;
+  align-items: center;
+  margin-left: 16px;
+  background: url('/assets/img/logo.svg') no-repeat center center;
+  text-indent: -10000px;
+}
+
+.nav{
+  margin-left: auto;
+  margin-right: 16px;
+  &__menu{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    display: flex;
+    position: relative;
+  }
+  &__desktop{
+    display: flex;
+  }
+  &__mobile{
+    display:none;
+  }
+  &__item{
+    display:inline-flex;
+  }
+  &__link{
+    padding:8px 16px;
+    color:#fff;
+    text-decoration: none;
+    align-self: center;
+    &--active{
+      transition: all .32s;
+      color:#000;
+      background:#fff;
+      border-radius: 6px;
+
+    }
+  }
+  &__trigger{
+    display: block;
+    align-self: stretch;
+    width: 42px;
+    height: 42px;
+    background: url('/assets/img/ham.svg');
+    border: none;
+    text-indent: -10000px;
+    &:focus{
+      outline: none;
+      background-color: rgba(255, 255, 255, .5);
+    }
+  }
+}
+
+// Normally I would turn this into a mixin and add it to the sassResources section of the Angular.json
+@media (max-width: 768px) { 
+  .nav{
+    &__popup{
+      position: absolute;
+      right:16px;
+      top:100%;
+      background:#fff;
+      border: 1px solid rgba(0,0,0,.1);
+      padding: 8px 16px;
+      min-width: 220px;
+      box-shadow: 0 10px 20px -10px rgba(0,0,0,.25);
+      border-radius: 6px;
+      flex-direction: column;
+    }
+    &__desktop{
+      display:none;
+    }
+    // Show menu button on small devices.
+    &__mobile{
+      display: block;
+    }
+    &__item{
+      display:flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    &__link{
+      display:block;
+      background: transparent;
+      transition: background .23s ease-in;
+      width: 100%;
+      &--popup{
+        color: #000;
+        background: #fff;
+      }
+      &:hover{
+        background: rgba(0,0,0,.1);
+      }
+    }
+  }
+}

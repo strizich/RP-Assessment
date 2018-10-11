@@ -1,0 +1,19 @@
+// This solves the short content floating footer problem... 
+// It will likely need fallbacks to cover older browsers.
+
+.page{
+  &__wrapper{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  &__header{
+    flex-grow: 0;
+  }
+  &__content{
+    flex-grow: 2;
+  }
+  &__footer{
+    flex-grow: 0;
+  }
+}

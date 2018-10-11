@@ -1,0 +1,23 @@
+$displayList:(
+  "block": (block, 100%, null),
+  "flex": (flex, auto, left),
+  "flex-between": (flex, auto, space-between),
+  "flex-left": (flex, auto, flex-start),
+  "flex-right": (flex, auto, flex-end)
+);
+
+.text__group{
+  @each $display, $value in $displayList {
+    $displayType: nth($value, 1);
+    $width: nth($value, 2);
+    $justify: nth($value, 3);
+    &--#{$display}{
+      display:$displayType;
+      width: 100%;
+      @if($displayType == 'flex'){
+       justify-content: $justify;
+       align-items: center;
+      }
+    }
+  }
+}

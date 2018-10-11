@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="42px" viewBox="0 0 94 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="Logo" font-family="Roboto-Regular, Roboto" font-size="24" font-weight="normal" fill="#FFFFFF">
+            <tspan x="40" y="29">Logo</tspan>
+        </text>
+        <g id="Group-2" transform="translate(4.000000, 4.000000)">
+            <g id="Group" transform="translate(15.000000, 0.000000)" fill="#9B0EFE">
+                <polygon id="Path-2" points="0.732421875 0.193359375 0.732421875 33.7026367 11.0317383 29.0424805 16.0961914 3.33642578"></polygon>
+            </g>
+            <polygon id="Path" stroke-opacity="0.75" stroke="#9013FE" fill="url(#linearGradient-1)" points="15.2622907 0.197013194 15.8808594 0.0771449171 16.4994281 0.197013194 31.2988281 3.06488972 26.2805594 29.012245 16.4994281 33.3497025 15.8808594 33.7453615 15.2622907 33.3497025 6.48115934 29.012245 0.462890625 3.06488972"></polygon>
+        </g>
+    </g>
+</svg>

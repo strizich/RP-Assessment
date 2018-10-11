@@ -1,0 +1,36 @@
+.animated{
+  position: relative;
+  transition: all 3s;
+  height: 150px;
+  background:#efefef;
+  border-radius: 12px;
+  overflow:hidden;
+  padding:16px;
+
+  .box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 50px;
+    width:50px;
+    background:red;
+    right:16px;
+    bottom:16px;
+    color:#fff;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all .6s ease-in-out;
+    transform: rotateZ(0deg);
+    &.active{
+      right:50%;
+      bottom: 50%;
+      background:green;
+      transform: rotateZ(180deg);
+    }
+    &__angular{
+      @extend .box;
+      background:red;
+    }
+  }
+}

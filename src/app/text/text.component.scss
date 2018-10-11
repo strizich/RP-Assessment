@@ -1,0 +1,36 @@
+
+$typeList:(
+  "primary": (16px, #292929),
+  "secondary": (14px, rgba(0,0,0,.65)),
+  "label": (16px, rgba(0,0,0, .75)),
+  "label-sm": (11px, rgba(0,0,0, .75))
+);
+
+$statusList:(
+  "warning": (red),
+  "success": (green),
+  "info": (blue)
+);
+
+.text{
+  display:block;
+  padding: 0 4px 4px 4px;
+  @each $type, $value in $typeList{
+    $fontSize: nth($value, 1);
+    $color: nth($value, 2);
+    &__#{$type}{
+      color: $color;
+      font-size: $fontSize;
+      // Note: Use or instead of `||`. Learned something new.
+      @if $type == "label" or $type == "label-sm"{
+        padding-bottom:0;
+      }
+      @each $status, $value in $statusList{
+        $color: nth($value, 1);
+        &--#{$status}{
+            color: $color;    
+        }
+      }
+    }
+  }
+}

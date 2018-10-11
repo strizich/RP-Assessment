@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+
+// I normally would abstract this into a global.scss
+// file in the assets folder which will have other things
+// such as mixins, variables, functions, ect.
+// And use this file to import vendor scss files such as ngxBootstrap
+// or AngularMaterial.
+
+
+body, html{
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  position: relative;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,sans-serif;
+}
+
+.container, main{
+  padding: 16px;
+}
+
+h1, h2, h3, h4, h5{
+  margin-bottom: 8px;
+}
+
+.button__group{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: rgba(0,0,0,.1);
+}
+
+.btn{
+  padding: 8px;
+  &__primary{
+    background-color: #3B74FF;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+    border:none;
+    margin: 4px;
+    &:focus{
+      outline:none;
+      box-shadow: 0 0 0 4px rgba(59, 116, 255, .75)
+    }
+  }
+  &__block{
+    width: 100%;
+  }
+}
+
+hr{
+  border-color: rgba(0,0,0,.2);
+  border-width: 0 0 1px 0;
+}
